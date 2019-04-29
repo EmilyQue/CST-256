@@ -112,7 +112,7 @@ Route::get('/deleteSkills', 'SkillsController@deleteSkill');
 /*  USER JOB HISTORY  */
 /*Route is mapped to the 'jobHistory' URI and returns the job history form */
 Route::get('/jobHistory', function() {
-    return view('jobHistory');
+    return view('jobhistory');
 });
 
 /*Fetches post parameters of new job history */
