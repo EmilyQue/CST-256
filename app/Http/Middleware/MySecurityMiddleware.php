@@ -23,7 +23,7 @@ class MySecurityMiddleware {
         
         //step 2: run the business rules that check for all uri's that you do not need to secure
         $secureCheck = true;
-        if ($request->is('/') || $request->is('login') || $request->is('register') || $request->is('jobsrest') || $request->is('jobsrest/*') || $request->is('profilerest'))
+        if ($request->is('/') || $request->is('login') || $request->is('register') || $request->is('jobsrest') || $request->is('jobsrest/*') || $request->is('profilerest/*'))
             $secureCheck = false;
         $this->logger->info($secureCheck ? "Security middleware in handle()... Needs security" : "Security middleware in handle()...No security required");
         
